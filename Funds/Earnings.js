@@ -73,7 +73,7 @@ export default function Earnings() {
 
     const getData = () => {
         setIsLoading(true)
-        let URL = 'http://127.0.0.1:8000/earnings'
+        let URL = 'https://127.0.0.1:8000/earnings'
         fetch(URL, {
             headers: {
                 'Token': token
@@ -94,7 +94,7 @@ export default function Earnings() {
             })
         }
 
-        fetch('http://127.0.0.1:8000/earnings/'+id, requestOptions).then((res) => {
+        fetch('https://127.0.0.1:8000/earnings/'+id, requestOptions).then((res) => {
             return res.json();
         }).then((res) => {
             getData()
@@ -118,7 +118,7 @@ export default function Earnings() {
             })
         }
         if (currentAmount !== '') {
-            fetch('http://127.0.0.1:8000/earnings', requestOptions).then((res) => {
+            fetch('https://127.0.0.1:8000/earnings', requestOptions).then((res) => {
                 return res.json();
             }).then((res) => {
                 getData()
