@@ -73,7 +73,7 @@ export default function Costs() {
 
     const getData = () => {
         setIsLoading(true)
-        let URL = 'http://127.0.0.1:8000/costs'
+        let URL = 'https://127.0.0.1:8000/costs'
         fetch(URL, {
             headers: {
                 'Token': token
@@ -94,7 +94,7 @@ export default function Costs() {
             })
         }
 
-        fetch('http://127.0.0.1:8000/costs/'+id, requestOptions).then((res) => {
+        fetch('https://127.0.0.1:8000/costs/'+id, requestOptions).then((res) => {
             return res.json();
         }).then((res) => {
             getData()
@@ -118,7 +118,7 @@ export default function Costs() {
             })
         }
         if (currentAmount !== '') {
-            fetch('http://127.0.0.1:8000/costs', requestOptions).then((res) => {
+            fetch('https://127.0.0.1:8000/costs', requestOptions).then((res) => {
                 return res.json();
             }).then((res) => {
                 getData()

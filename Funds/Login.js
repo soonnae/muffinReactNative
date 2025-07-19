@@ -34,7 +34,7 @@ export default function Earnings() {
             })
         }
 
-        fetch('http://127.0.0.1:8000/login', requestOptions).then((res) => {
+        fetch('https://127.0.0.1:8000/login', requestOptions).then((res) => {
             return res.json()
         }).then((res) => {
             if (res !== '' && res !== 'error') {
